@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика №18, задания №1</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="image/icon.png" type="image/png"><!--Адрес иконки-->
+</head>
+<body>
+    <h1>Опросник для обладателей котиков =^-^= </h1>
+    <form>
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <label for="nikename">Введите кличку питомца:</label>
+            <input type="text" id="nikename" pattern="^[а-яА-ЯёЁa-zA-Z0-9- ]+$" 
+            title="Кличка может состоять из набора букв и цифр (латиница или кириллица), тире и пробелов " required />
+        </div>
+        
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            Укажите пол питомца:
+            <label for="she">Самка</label>
+            <input type="radio" name="sex" id="she" value="she" required />
+            <label for="he">Самец</label>
+            <input type="radio" name="sex" id="he" value="he" required />
+        </div> 
+        
+        <div style="margin-top: 10px; margin-bottom: 10px;">Выберите породу питомца:
+            <select>
+                <option value="option1">Дворовой</option><option value="option2" selected>Домашний</option>
+                <option value="option3">Сиамский</option><option value="option4">Бенгальский</option>
+                <option value="option5">Британская</option><option value="option6">Корниш рекс</option>
+                <option value="option7">Персидский</option><option value="option8">Мейн-кун</option>
+                <option value="option9">Сфинкс</option><option value="option10">Сибирский</option>
+                <option value="option11">Др.</option>
+            </select>
+        </div>
+            
+        <fieldset style="width: 200px; margin-top: 10px; margin-bottom: 10px;">
+            <legend>Выберите, чем питается Ваш питомец:</legend>
+            <input type="checkbox" id="food1" checked="checked"/>
+            <label for="food1">Натуральный корм</label></br>
+            <input type="checkbox" id="food2" />
+            <label for="food2">Сухой корм</label></br>
+            <input type="checkbox" id="food3" />
+            <label for="food3">Влажный корм</label></br>
+        </fieldset>
+        
+        <fieldset style="width: 230px; height: 160px; margin-top: 10px; margin-bottom: 10px;">
+            <legend>ФИО владельца:</legend>
+            <div><label for="lastname">Введите фамилию владельца:</label>
+                <input type="text" id="lastname" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Фамилия может состоять из набора букв (латиница или кириллица), двойная фамилия разделяется тире" required />
+            <label for="firstname1">Введите имя владельца:</label>
+                <input type="text" id="firstname1" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Имя может состоять из набора букв (латиница или кириллица), двойное имя разделяется тире" required />
+            <label for="firstname2">Введите отчество владельца:</label>
+                <input type="text" id="firstname2" pattern="^[а-яА-ЯёЁa-zA-Z-]+$" 
+                title="Отчество может состоять из набора букв (латиница или кириллица)" required /></div>                               
+        </fieldset>
+        
+        <fieldset style="width: 500px;">
+            <legend>Контакты владельца:</legend>
+                <label for="tel">Введите номер телефона владельца:</label>
+                <input type="tel" id="tel" pattern="^\+?(\d{1,3})?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$" 
+                    title = "Формат телефона (212) 348-2626 или +1 832-393-1000"required /> 
+                <label for="address">Введите адрес проживания владельца:</label>
+                <textarea rows="5" cols="50" id="address"></textarea>                
+        </fieldset>
+        
+        <div style="margin-top: 10px;">
+            <label>Приложить фото питомца:</label>
+            <input type="file"/>
+        </div>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;">
+            <input type="submit" value="Отправить"/>
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+body {
+    background: rgb(153, 99, 189); /* Цвет фона */
+    color: black; /* Цвет текста */
+    margin-left: 20px;
+}
+
+form {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+input:required:valid { 
+    border-color: green;
+}
